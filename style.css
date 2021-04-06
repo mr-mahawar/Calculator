@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    min-height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(-45deg,#ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Scroll Bar */
+    /* width */
+    ::-webkit-scrollbar {
+    height: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+
+/* Buttons CSS*/
+button {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    width: 65px;
+    outline: none;
+    border: none;
+    padding: 8px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    filter: brightness(90%);
+}
+
+button:active {
+    filter: brightness(105%);
+}
+
+/* Calculator Container */
+.calculator {
+    background-color: white;
+    width: 310px;
+    border-radius: 4px;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.25);
+}
+
+
+/* Calculator Display */
+.display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(46, 46, 46);
+    border-radius: 4px 4px 0 0;
+    transition: .1s;
+}
+
+.flash {
+    transition: .1s;
+    background-color: white;
+}
+
+.display h1 {
+    overflow-x: auto;
+    padding: 15px;
+    margin: 0;
+    color: white;
+    font-weight: normal;
+}
+
+/* Buttons Container */
+.buttons {
+    display: grid;
+    padding: 15px 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    user-select: none;
+}
+
+.buttons i {
+    font-size: 18px;
+}
+
+.operator {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.clear {
+    background-color: rgb(255, 0, 76);
+    color: white;
+}
+
+.equals  {
+    background-color: rgb(50, 255, 50);
+}
+
+.backspace {
+    background-color: rgb(46, 46, 46);
+    color: white;
+}
+
+.equals {
+    grid-column: -1;
+    grid-row: 3 / 6;
+}
+
+.backspace {
+    grid-column: -1;
+    grid-row: 2;
+}
